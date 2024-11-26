@@ -1,3 +1,5 @@
 {
-  "item.testmod.testmat": "Test Mat"
+  "item.testmod.testmat": "Test Mat",
+
+  "block.tutorialmod.test_block": "Test Block"
 }

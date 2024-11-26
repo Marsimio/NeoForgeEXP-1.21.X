@@ -1,5 +1,6 @@
 package com.marsim.testmod;
 
+import com.marsim.testmod.block.ModBlocks;
 import com.marsim.testmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -42,6 +43,7 @@ public class TestMod
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -61,7 +63,11 @@ public class TestMod
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.TESTMAT);
         }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.TEST_BLOCK);
+        }
     }
+
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

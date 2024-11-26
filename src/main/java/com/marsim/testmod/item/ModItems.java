@@ -9,9 +9,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TestMod.MODID);
 
-    public static final DeferredItem<Item> TESTMAT = ITEMS.registerItem(
+    public static final DeferredItem<Item> TESTMAT = ITEMS.registerSimpleItem(
             "testmat",
-            Item::new,
             new Item.Properties()
     );
 
