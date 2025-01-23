@@ -1,6 +1,7 @@
 package com.marsim.testmod;
 
 import com.marsim.testmod.block.ModBlocks;
+import com.marsim.testmod.entity.ModEntities;
 import com.marsim.testmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -44,6 +45,7 @@ public class TestMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
